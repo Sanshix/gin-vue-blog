@@ -1,8 +1,5 @@
-
-<div align=center>
-<img src="http://qmplusimg.henrongyi.top/gvalogo.jpg" width=300" height="300" />
-</div>
-<div align=center>
+<div>
+<h1>gin-vue-blog</h1>
 <img src="https://img.shields.io/badge/golang-1.16-blue"/>
 <img src="https://img.shields.io/badge/gin-1.7.0-lightBlue"/>
 <img src="https://img.shields.io/badge/vue-3.2.25-brightgreen"/>
@@ -10,74 +7,10 @@
 <img src="https://img.shields.io/badge/gorm-1.22.5-red"/>
 </div>
 
-[English](./README-en.md) | 简体中文
-
-## 不同版本
-
-我们会对以下四个版本持续维护，请选择适合自己的版本使用。最新技术栈为组合式api版本，已支持多语言（I18N）
-
-[组合式API版（主）](https://github.com/flipped-aurora/gin-vue-admin) | 
-[组合式API多语言(i18n)版](https://github.com/flipped-aurora/gin-vue-admin/tree/i18n-dev-new) | 
-[声明式API版](https://github.com/flipped-aurora/gin-vue-admin/tree/v2.4.x) | 
-[声明式API多语言(i18n)版](https://github.com/flipped-aurora/gin-vue-admin/tree/i18n-dev)
-
-# 项目文档
-[在线文档](https://www.gin-vue-admin.com) : https://www.gin-vue-admin.com
-
-[初始化](https://www.gin-vue-admin.com/guide/start-quickly/initialization.html)
-						       
-[从环境到部署教学视频](https://www.bilibili.com/video/BV1Rg411u7xH)
-
-[开发教学](https://www.gin-vue-admin.com/guide/start-quickly/env.html) (贡献者:  <a href="https://github.com/LLemonGreen">LLemonGreen</a> And <a href="https://github.com/fkk0509">Fann</a>)
-
-[交流社区](https://support.qq.com/products/371961)
-
-[插件市场](https://plugin.gin-vue-admin.com/)
-
-# 重要提示
-
-1.本项目从起步到开发到部署均有文档和详细视频教程
-
-2.本项目需要您有一定的golang和vue基础
-
-3.您完全可以通过我们的教程和文档完成一切操作，因此我们不再提供免费的技术服务，如需服务请进行[付费支持](https://www.gin-vue-admin.com/coffee/payment.html)
-
-4.如果您将此项目用于商业用途，请遵守Apache2.0协议并保留作者技术支持声明。您需保留如下版权声明信息，其余信息功能不做任何限制。如需剔除请[购买授权](https://www.gin-vue-admin.com/empower/index.html)
-
-<img src="https://qmplusimg.henrongyi.top/%E6%8E%88%E6%9D%83.png" width="1000">
 
 ## 1. 基本介绍
 
-### 1.1 项目介绍
-
-> Gin-vue-admin是一个基于 [vue](https://vuejs.org) 和 [gin](https://gin-gonic.com) 开发的全栈前后端分离的开发基础平台，集成jwt鉴权，动态路由，动态菜单，casbin鉴权，表单生成器，代码生成器等功能，提供多种示例文件，让您把更多时间专注在业务开发上。
-
-[在线预览](http://demo.gin-vue-admin.com): http://demo.gin-vue-admin.com
-
-测试用户名：admin
-
-测试密码：123456
-
-### 1.2 贡献指南
-Hi! 首先感谢你使用 gin-vue-admin。
-
-Gin-vue-admin 是一套为快速研发准备的一整套前后端分离架构式的开源框架，旨在快速搭建中小型项目。
-
-Gin-vue-admin 的成长离不开大家的支持，如果你愿意为 gin-vue-admin 贡献代码或提供建议，请阅读以下内容。
-
-#### 1.2.1 Issue 规范
-- issue 仅用于提交 Bug 或 Feature 以及设计相关的内容，其它内容可能会被直接关闭。如果你在使用时产生了疑问，请到 Slack 或 [Gitter](https://gitter.im/ElemeFE/element) 里咨询。
-
-- 在提交 issue 之前，请搜索相关内容是否已被提出。
-
-#### 1.2.2 Pull Request 规范
-- 请先 fork 一份到自己的项目下，不要直接在仓库下建分支。
-
-- commit 信息要以`[文件名]: 描述信息` 的形式填写，例如 `README.md: fix xxx bug`。
-
-- 如果是修复 bug，请在 PR 中给出描述信息。
-
-- 合并代码需要两名维护人员参与：一人进行 review 后 approve，另一人再次 review，通过后即可合并。
+> Gin-Vue-Blog是一个基于 [gin-vue-admin](https://github.com/flipped-aurora/gin-vue-admin) 二次开发的全栈前后端分离的个人博客程序。
 
 ## 2. 使用说明
 
@@ -89,12 +22,13 @@ Gin-vue-admin 的成长离不开大家的支持，如果你愿意为 gin-vue-adm
 
 ### 2.1 server项目
 
-使用 `Goland` 等编辑工具，打开server目录，不可以打开 gin-vue-admin 根目录
+使用 `Goland` 等编辑工具，打开server目录，不可以打开 gin-vue-blog 根目录
 
 ```bash
 
 # 克隆项目
-git clone https://github.com/flipped-aurora/gin-vue-admin.git
+git clone https://github.com/Sanshix/gin-vue-blog
+
 # 进入server文件夹
 cd server
 
@@ -102,10 +36,12 @@ cd server
 go generate
 
 # 编译 
-go build -o server main.go (windows编译命令为go build -o server.exe main.go )
+go build -o server main.go 
+(windows编译命令为go build -o server.exe main.go )
 
 # 运行二进制
-./server (windows运行命令为 server.exe)
+./server 
+(windows运行命令为 server.exe)
 ```
 
 ### 2.2 web项目
@@ -159,24 +95,6 @@ swag init
 
 > 执行上面的命令后，server目录下会出现docs文件夹里的 `docs.go`, `swagger.json`, `swagger.yaml` 三个文件更新，启动go服务之后, 在浏览器输入 [http://localhost:8888/swagger/index.html](http://localhost:8888/swagger/index.html) 即可查看swagger文档
 
-### 2.4 VSCode工作区
-
-#### 2.4.1 开发
-
-使用`VSCode`打开根目录下的工作区文件`gin-vue-admin.code-workspace`，在边栏可以看到三个虚拟目录：`backend`、`frontend`、`root`。
-
-#### 2.4.2 运行/调试
-
-在运行和调试中也可以看到三个task：`Backend`、`Frontend`、`Both (Backend & Frontend)`。运行`Both (Backend & Frontend)`可以同时启动前后端项目。
-
-#### 2.4.3 settings
-
-在工作区配置文件中有`go.toolsEnvVars`字段，是用于`VSCode`自身的go工具环境变量。此外在多go版本的系统中，可以通过`gopath`、`go.goroot`指定运行版本。
-
-```json
-    "go.gopath": null,
-    "go.goroot": null,
-```
 
 ## 3. 技术选型
 
@@ -298,86 +216,3 @@ swag init
         └── yarn.lock
 
 ```
-
-## 5. 主要功能
-
-- 权限管理：基于`jwt`和`casbin`实现的权限管理。
-- 文件上传下载：实现基于`七牛云`, `阿里云`, `腾讯云` 的文件上传操作(请开发自己去各个平台的申请对应 `token` 或者对应`key`)。
-- 分页封装：前端使用 `mixins` 封装分页，分页方法调用 `mixins` 即可。
-- 用户管理：系统管理员分配用户角色和角色权限。
-- 角色管理：创建权限控制的主要对象，可以给角色分配不同api权限和菜单权限。
-- 菜单管理：实现用户动态菜单配置，实现不同角色不同菜单。
-- api管理：不同用户可调用的api接口的权限不同。
-- 配置管理：配置文件可前台修改(在线体验站点不开放此功能)。
-- 条件搜索：增加条件搜索示例。
-- restful示例：可以参考用户管理模块中的示例API。
-	- 前端文件参考: [web/src/view/superAdmin/api/api.vue](https://github.com/flipped-aurora/gin-vue-admin/blob/master/web/src/view/superAdmin/api/api.vue)
-    - 后台文件参考: [server/router/sys_api.go](https://github.com/flipped-aurora/gin-vue-admin/blob/master/server/router/sys_api.go)
-- 多点登录限制：需要在`config.yaml`中把`system`中的`use-multipoint`修改为true(需要自行配置Redis和Config中的Redis参数，测试阶段，有bug请及时反馈)。
-- 分片长传：提供文件分片上传和大文件分片上传功能示例。
-- 表单生成器：表单生成器借助 [@form-generator](https://github.com/JakHuang/form-generator) 。
-- 代码生成器：后台基础逻辑以及简单curd的代码生成器。
-
-## 6. 知识库 
-
-## 6.1 团队博客
-
-> https://www.yuque.com/flipped-aurora
->
->内有前端框架教学视频。如果觉得项目对您有所帮助可以添加我的个人微信:shouzi_1994，欢迎您提出宝贵的需求。
-
-## 6.2 教学视频
-
-（1）手把手教学视频
-
-> https://www.bilibili.com/video/BV1Rg411u7xH/
-
-（2）后端目录结构调整介绍以及使用方法
-
-> https://www.bilibili.com/video/BV1x44y117TT/
-
-（3）golang基础教学视频
-
-> bilibili：https://space.bilibili.com/322210472/channel/detail?cid=108884
-
-（4）gin框架基础教学
-
-> bilibili：https://space.bilibili.com/322210472/channel/detail?cid=126418&ctype=0
-
-（5）gin-vue-admin 版本更新介绍视频
-
-> bilibili：https://www.bilibili.com/video/BV1kv4y1g7nT
-
-## 7. 联系方式
-
-### 7.1 技术群
-
-### QQ交流群：622360840
-| QQ 群 |
-|  :---:  |
-| <img src="http://qmplusimg.henrongyi.top/qq.jpg" width="180"/> |
-
-### 微信交流群
-| 微信 |
-|  :---:  | 
-| <img width="150" src="http://qmplusimg.henrongyi.top/qrjjz.png"> 
-
-添加微信，备注"加入gin-vue-admin交流群"
-
-### [关于我们](https://www.gin-vue-admin.com/about/join.html)
-
-## 8. 贡献者
-
-感谢您对gin-vue-admin的贡献!
-
-<a href="https://github.com/flipped-aurora/gin-vue-admin/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=flipped-aurora/gin-vue-admin" />
-</a>
-
-## 9. 捐赠
-
-如果你觉得这个项目对你有帮助，你可以请作者喝饮料 :tropical_drink: [点我](https://www.gin-vue-admin.com/coffee/index.html)
-
-## 10. 商用注意事项
-
-如果您将此项目用于商业用途，请遵守Apache2.0协议并保留作者技术支持声明。
